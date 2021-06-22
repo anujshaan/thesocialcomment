@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+:root{
+  font-size: 18px;
+  --primary : rgb(0, 153, 255);
+  --secondary: rgb(255, 94, 0);
+}
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(44, 41, 41);
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Main page css*/
+
+.main-page{
+  
+  width: 90%;
+  background-color: black;
+  height: 90vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Navigation bar css */
+.navbar{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;  
+  position: fixed;
+  width: 4rem;
+  height: 90vh;
+  color: #fff;
+  padding: 1rem;
+  border-right: 1px solid rgb(94, 93, 93);
+}
+ul,li a{
+  list-style: none;
+  color: #fff;
+}
+.navbar .logo{
+  padding-right: 2.8em;
+  margin-bottom: 20px;
+}
+.navbar a:hover{
+  color:var(--primary);
+}
+.navbar li:hover{
+  border-right: 3px solid var(--primary);
+}
+.navbar .logo:first-child{
+  margin: 10px 0 40px 0;
+}
+.navbar .logo:first-child:hover{
+  border:none;
+  color: var(--secondary);
+}
+.navbar .setting-icon{
+  padding-right: 2.8rem;
+}
+/*Top user profile info*/
+.profile-bar-img{
+  display: flex;
+  justify-content:flex-end ;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  font-size: 14px;
+  /* justify-content: center; */
+  align-items:center;
+  padding: 10px 30px 0 0;
+
+}
+.profile-bar-img p{
+  padding:0 1rem;
+}
+.profile-bar-img img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.main-header{
+  display: flex;
+  justify-content:space-between;
+  width: 85%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  float: right;
+  position: relative;
+  left: -5%;
+}
+.main-header p{
+  font-weight: 700;
+}
+.main-header .fulldate{
+  color:var(--primary);
+}
+.main-header button{
+  font-size: 18px;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary);
+  color:#fff;
+  border: none;
+  border-radius:3px ;
+}
+.main-header .searchBar{
+  padding:0 2rem;
+  text-align: center;
+}
+.main-header .searchBar i{
+  font-size: 14px;
+}
+.main-header .searchBar input{
+  padding:0.5rem 1rem;
+  background-color: black;
+  color: #fff; 
+  border: none;
+}
+.box1-header{
+  height: 8rem;
+  width: 16rem;
+  position: relative;
+  top:10%;  
+  left: 10%;
+  background-color: rgb(88, 87, 87);
+  border-radius: 10px;
+  opacity: 0.5;
+  display: flex;
+}
+.box1-header .box1-graph{
+  width: 7rem;
 }
 
-.App-link {
-  color: #61dafb;
+.firstbox{
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+  padding-top: 2rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.firstbox .shortlist{
+  background-color: var(--primary);
 }
